@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    font-weight: 400;
+    background-color: #4a4e69;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family:'Courier New', Courier, monospace;
+}
+/* section */
+.screen{
+    margin-bottom: 22px;
+}
+.screen input{
+    color: white;
+    padding: 26px;
+    border-radius: 5px;
+    background-color: #22223b;
+    border: none;
+}
+.screen input:focus{
+    outline: none;
+}
+.container-numbers-tools{
+    background-color: #313154;
+    text-align: center;
+    padding: 12px;
+    border-radius: 5px;
+}
+.container-numbers-tools div{
+    display: flex;
+    justify-content: space-between;
+}
+.container-numbers-tools div button{
+    margin: 5px;
+    width: 100%;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    transition: .3s;
+    font-weight: 500;
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+}
+.container-numbers-tools div button:active{
+    background-color: green;
+}
+.btn-delete , .btn-equal{
+    background-color: #4a4e69;
+    color: white;
+}
+.btn-reset{
+    background-color: crimson;
+    color: white;
+}
