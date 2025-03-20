@@ -32,11 +32,17 @@ function Reset_in_input(){
 
 btnEqual.addEventListener("click" , Same_value);
 function Same_value(){
-    try {
-        let REGEX = inp.value.replace(/x/g, "*").replace(/÷/g, "/");
-        let theSameValue = eval(REGEX);
-        inp.value = theSameValue;
-    } catch {
+    if (inp.value != "") {
+        try {
+            let REGEX = inp.value.replace(/x/g, "*").replace(/÷/g, "/");
+            let theSameValue = eval(REGEX);
+            inp.value = theSameValue;
+        } catch {
+            inp.value = "Error";
+        }
+    }
+
+    if (inp.value == "NaN") {
         inp.value = "Error";
     }
 }
