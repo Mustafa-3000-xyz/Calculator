@@ -32,7 +32,7 @@ function Reset_in_input(){
 
 btnEqual.addEventListener("click" , Same_value);
 function Same_value(){
-    if (inp.value != "") {
+    if (inp.value != "" && inp.value != "Error") {
         try {
             let REGEX = inp.value.replace(/x/g, "*").replace(/÷/g, "/");
             let theSameValue = eval(REGEX);
@@ -42,7 +42,7 @@ function Same_value(){
         }
     }
 
-    if (inp.value == "NaN") {
+    if (inp.value == "NaN" || inp.value == "Infinity") {
         inp.value = "Error";
     }
 }
