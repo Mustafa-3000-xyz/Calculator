@@ -32,17 +32,15 @@ function Reset_in_input(){
 
 btnEqual.addEventListener("click" , Same_value);
 function Same_value(){
-    if (inp.value != "" && inp.value != "Error") {
-        try {
-            let REGEX = inp.value.replace(/x/g, "*").replace(/÷/g, "/");
-            let theSameValue = eval(REGEX);
-            inp.value = theSameValue;
-        } catch {
-            inp.value = "Error";
-        }
+    try {
+        let REGEX = inp.value.replace(/x/g, "*").replace(/÷/g, "/");
+        let theSameValue = eval(REGEX);
+        inp.value = theSameValue;
+    } catch {
+        inp.value = "Error";
     }
 
-    if (inp.value == "NaN" || inp.value == "Infinity") {
+    if (inp.value == "NaN" || inp.value == "Infinity" || inp.value == "undefined" ||  inp.value == "function Error() { [native code] }") {
         inp.value = "Error";
     }
 }
